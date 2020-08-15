@@ -481,6 +481,21 @@ hr {
   text-align: right;
 }
 
+.fade {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* Row */
 
 .row {
@@ -4061,7 +4076,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 #main #aboutme {
-  padding: 20rem 4rem 1rem 4rem;
+  padding: 10rem 4rem 1rem 4rem;
 }
 
 #main > *:first-child {
@@ -4985,12 +5000,12 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     opacity: 0.5;
   }
 
-  body.is-navPanel-visible #navPanel {
+  /* body.is-navPanel-visible #navPanel {
     -moz-transform: translateX(0);
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
     box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
     visibility: visible;
-  }
+  } */
 }

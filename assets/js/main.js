@@ -9,11 +9,11 @@
     $body = $("body"),
     $wrapper = $("#wrapper"),
     $header = $("#header"),
-    $nav = $("#nav"),
-    $main = $("#main"),
-    $navPanelToggle,
-    $navPanel,
-    $navPanelInner;
+    // $nav = $("#nav"),
+    $main = $("#main");
+  // $navPanelToggle,
+  // $navPanel,
+  // $navPanelInner;
 
   // Breakpoints.
   breakpoints({
@@ -107,66 +107,66 @@
   // Nav Panel.
 
   // Toggle.
-  $navPanelToggle = $(
-    '<a href="#navPanel" id="navPanelToggle">Menu</a>'
-  ).appendTo($wrapper);
+  // $navPanelToggle = $(
+  //   '<a href="#navPanel" id="navPanelToggle">Menu</a>'
+  // ).appendTo($wrapper);
 
   // Change toggle styling once we've scrolled past the header.
-  $header.scrollex({
-    bottom: "5vh",
-    enter: function () {
-      $navPanelToggle.removeClass("alt");
-    },
-    leave: function () {
-      $navPanelToggle.addClass("alt");
-    },
-  });
+  // $header.scrollex({
+  //   bottom: "5vh",
+  //   enter: function () {
+  //     $navPanelToggle.removeClass("alt");
+  //   },
+  //   leave: function () {
+  //     $navPanelToggle.addClass("alt");
+  //   },
+  // });
 
   // Panel.
-  $navPanel = $(
-    '<div id="navPanel">' +
-      "<nav>" +
-      "</nav>" +
-      '<a href="#navPanel" class="close"></a>' +
-      "</div>"
-  )
-    .appendTo($body)
-    .panel({
-      delay: 500,
-      hideOnClick: true,
-      hideOnSwipe: true,
-      resetScroll: true,
-      resetForms: true,
-      side: "right",
-      target: $body,
-      visibleClass: "is-navPanel-visible",
-    });
+  // $navPanel = $(
+  //   '<div id="navPanel">' +
+  //     "<nav>" +
+  //     "</nav>" +
+  //     '<a href="#navPanel" class="close"></a>' +
+  //     "</div>"
+  // )
+  //   .appendTo($body)
+  //   .panel({
+  //     delay: 500,
+  //     hideOnClick: true,
+  //     hideOnSwipe: true,
+  //     resetScroll: true,
+  //     resetForms: true,
+  //     side: "right",
+  //     target: $body,
+  //     visibleClass: "is-navPanel-visible",
+  //   });
 
   // Get inner.
-  $navPanelInner = $navPanel.children("nav");
+  // $navPanelInner = $navPanel.children("nav");
 
-  // Move nav content on breakpoint change.
-  var $navContent = $nav.children();
+  // // Move nav content on breakpoint change.
+  // var $navContent = $nav.children();
 
-  breakpoints.on(">medium", function () {
-    // NavPanel -> Nav.
-    $navContent.appendTo($nav);
+  // breakpoints.on(">medium", function () {
+  //   // NavPanel -> Nav.
+  //   $navContent.appendTo($nav);
 
-    // Flip icon classes.
-    $nav.find(".icons, .icon").removeClass("alt");
-  });
+  //   // Flip icon classes.
+  //   $nav.find(".icons, .icon").removeClass("alt");
+  // });
 
-  breakpoints.on("<=medium", function () {
-    // Nav -> NavPanel.
-    $navContent.appendTo($navPanelInner);
+  // breakpoints.on("<=medium", function () {
+  //   // Nav -> NavPanel.
+  //   $navContent.appendTo($navPanelInner);
 
-    // Flip icon classes.
-    $navPanelInner.find(".icons, .icon").addClass("alt");
-  });
+  //   // Flip icon classes.
+  //   $navPanelInner.find(".icons, .icon").addClass("alt");
+  // });
 
-  // Hack: Disable transitions on WP.
-  if (browser.os == "wp" && browser.osVersion < 10)
-    $navPanel.css("transition", "none");
+  // // Hack: Disable transitions on WP.
+  // if (browser.os == "wp" && browser.osVersion < 10)
+  //   $navPanel.css("transition", "none");
 
   // Intro.
   var $intro = $("#intro");
@@ -218,4 +218,64 @@
       });
     });
   }
+
+  //Quotes Scroll Animations
+
+  const quotes = document.querySelectorAll(".fade");
+
+  var observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.style.animation = `fadeIn 0.7s forwards ease-out`;
+      } else {
+        entry.target.style.animation = "none";
+      }
+    });
+  });
+  quotes.forEach((quote) => {
+    observer.observe(quote);
+  });
 })(jQuery);
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function (event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $("html, body").animate(
+          {
+            scrollTop: target.offset().top,
+          },
+          1000,
+
+          function () {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) {
+              // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            }
+          }
+        );
+      }
+    }
+  });
