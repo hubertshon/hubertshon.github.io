@@ -211,8 +211,8 @@ body.is-preload *:after {
   margin: 0 0 4vh 0;
 }
 .about-text {
-  width: 66%;
-  /* float: right; */
+  width: 45%;
+  float: left;
   margin: 0;
   text-align: left;
 }
@@ -507,7 +507,7 @@ hr {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  margin: 5em 3em 3em 3em;
+  margin: 5em 2em 3em 3em;
   padding: 0.25em;
   border-width: 0px !important;
 }
@@ -536,6 +536,11 @@ hr {
   box-shadow: unset;
   fill: #18bfef !important;
   transform: translate(0px, -15px);
+  transition: 0.2s ease-out;
+}
+
+.top-link button:after {
+  transform: translate(0px, 0px);
   transition: 0.2s ease-out;
 }
 
@@ -3227,16 +3232,18 @@ header.major .date:after {
   line-height: 2em;
   font-size: 0.8em;
 }
-.skills-list {
-  align-items: center;
-  padding-left: 0;
-  margin: 2rem, auto, 0, 0;
-  width: 100%;
+#skills-list {
+  margin-left: 8rem;
+}
+
+#skills-list i {
+  color: #e0eec7;
+  font-size: 2.66em;
 }
 
 .list {
-  margin: 0 10rem 0 0;
-  padding-left: 0;
+  margin: 0 5rem 0 0;
+
   text-align: left;
   line-height: 2.375em;
 }
@@ -3244,8 +3251,9 @@ header.major .date:after {
 .list h3 {
   font-family: "Mulish", sans-serif;
   line-height: 0.2;
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-weight: 400;
+  font-size: 1.2em;
 }
 
 .about-anchor {
