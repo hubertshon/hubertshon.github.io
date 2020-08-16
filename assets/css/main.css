@@ -503,7 +503,7 @@ hr {
   position: fixed;
   bottom: 0;
   right: 0;
-  display: flex;
+  display: block;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -521,10 +521,11 @@ hr {
   visibility: hidden;
   opacity: 0;
 }
+
 .top-link button {
   display: block;
-  font-size: 3em;
   box-shadow: unset;
+  font-size: 2.8em;
   color: #fa9502 !important;
 }
 
@@ -542,6 +543,14 @@ hr {
 .top-link button:after {
   transform: translate(0px, 0px);
   transition: 0.2s ease-out;
+}
+
+#buttontop-text {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 0.3em;
+  font-family: "Mulish", sans-serif;
 }
 
 /* Row */
