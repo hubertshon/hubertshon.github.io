@@ -226,7 +226,7 @@
   var observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.intersectionRatio > 0) {
-        entry.target.style.animation = `fadeIn 0.7s forwards ease-out`;
+        entry.target.style.animation = "fadeIn 0.6s forwards ease-out";
       } else {
         entry.target.style.animation = "none";
       }
