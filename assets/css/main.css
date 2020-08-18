@@ -524,6 +524,12 @@ hr {
   border-width: 0px !important;
 }
 
+@media screen and (max-width: 480px) {
+  .top-link {
+    margin: 0 0 2em auto;
+  }
+}
+
 .show {
   visibility: visible;
   opacity: 1;
@@ -4334,11 +4340,14 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
   .icons {
     text-align: center;
-    padding: 0 auto !important;
+    padding: 0;
   }
   .icons li {
-    align-items: center;
-    padding: 0 auto !important;
+    padding: 0;
+  }
+
+  .left-quote p {
+    line-height: 1.6em;
   }
 }
 
