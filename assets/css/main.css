@@ -217,6 +217,18 @@ body.is-preload *:after {
   text-align: left;
 }
 
+@media screen and (max-width: 480px) {
+  .about-text {
+    width: 100%;
+  }
+  .aboutme,
+  .aboutme h2 {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+}
+
 html {
   font-size: 16pt;
 }
@@ -3241,11 +3253,11 @@ header.major .date:after {
   line-height: 2em;
   font-size: 0.8em;
 }
-#skills-list {
+.skills-list {
   margin-left: 8rem;
 }
 
-#skills-list i {
+.skills-list i {
   color: #e0eec7;
   font-size: 2.66em;
 }
@@ -3264,7 +3276,12 @@ header.major .date:after {
   font-weight: 400;
   font-size: 1.2em;
 }
-
+@media screen and (max-width: 480px) {
+  .skills-list {
+    margin-left: 3rem;
+    padding: 2rem 2rem 0.1rem 2rem;
+  }
+}
 .about-anchor {
   display: block;
   position: relative;
@@ -3535,24 +3552,6 @@ table.alt tbody tr td {
   z-index: -1;
   opacity: 0.07;
 }
-
-/* #wrapper > .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #212931;
-  background-image: url("../../images/overlay.png"),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("../../images/bg.jpg");
-  background-size: auto, auto, 100% auto;
-  background-position: center, center, top center;
-  background-repeat: repeat, no-repeat, no-repeat;
-  background-attachment: scroll, scroll, scroll;
-  z-index: -1;
-  opacity: 0.08;
-} */
 
 . #wrapper > .bg.fixed {
   position: fixed;
@@ -4274,11 +4273,11 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
 
   #main > .posts > article:nth-child(2n - 1) {
-    border-left-width: 1px;
+    border-left-width: 0px;
   }
 
   #main > .posts > article:nth-child(-n + 2) {
-    border-top-width: 1px;
+    border-top-width: 0px;
   }
 
   #main > .posts > article:nth-child(n) {
@@ -4326,6 +4325,21 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   /* margin: 5rem 0 5rem auto; */
   margin: 5rem auto;
   order: 1;
+}
+
+@media screen and (max-width: 480px) {
+  #contactinfo {
+    width: 100%;
+    padding: 2rem 2rem 0.1rem 2rem;
+  }
+  .icons {
+    text-align: center;
+    padding: 0 auto !important;
+  }
+  .icons li {
+    align-items: center;
+    padding: 0 auto !important;
+  }
 }
 
 #footer {
