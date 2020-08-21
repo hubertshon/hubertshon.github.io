@@ -467,7 +467,7 @@ hr {
 
 .archive,
 .archive .title {
-  margin: 25vh auto;
+  margin: 25vh auto 10vh auto;
 }
 
 .layout {
