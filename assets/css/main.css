@@ -215,6 +215,7 @@ body.is-preload *:after {
   float: left;
   margin: 0;
   text-align: left;
+  line-height: 1.4em;
 }
 
 @media screen and (max-width: 480px) {
@@ -487,25 +488,32 @@ hr {
   text-align: center;
 }
 
-.vertical-line {
-  display: inline-block;
-  border-left: 1px solid #fa9500;
+.line-container {
+  height: 75vh;
+  margin-top: 2vh;
+}
 
+.vertical-line {
+  display: block;
+  border-left: 1px solid #fa9500;
   margin: 0 50%;
-  height: 600px;
+  height: 100%;
 }
 
 .left-quote {
-  position: relative;
+  position: block;
+  float: left;
   font-style: italic;
-  padding-right: 0;
-  margin: 0 50% 0 auto;
-  top: 30vh;
-  right: 5vw;
-  width: 25vw;
+  padding-left: 10vw;
+  margin: 30vh 0 auto 15vw;
+  width: 30vw;
   height: 10vh;
   text-align: right;
-  font-weight: 500;
+  font-weight: 600;
+}
+
+.left-quote h3 {
+  font-size: 1.6em;
 }
 
 .left-quote p {
@@ -2846,8 +2854,8 @@ input[type="radio"]:focus + label:before {
 
 .profile-pic {
   display: block;
-  margin: 7vh auto 2vh 0;
-  max-width: 100%;
+  margin: 7vh auto 2vh auto;
+  max-width: 80%;
   box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.15),
     0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -3293,42 +3301,41 @@ header.major .date:after {
 
 .about-title h2 {
   font-weight: 300;
-  font-size: 4.5em;
+  font-size: 3.3em;
   margin-bottom: 0;
 }
 .no-bullets li {
   text-align: left;
   list-style-type: none;
-  padding-left: 0;
+  padding-left: 1rem;
   margin-right: 1rem;
   line-height: 2em;
   font-size: 0.8em;
 }
-.skills-list {
-  text-align: left;
-  margin-right: 0;
-}
+/* .skills-list {
+  margin-left: 4vw;
+} */
 
 .skills-list i {
   color: #e0eec7;
   font-size: 2.66em;
 }
 
-.list,
-#tools {
-  margin: 0rem 1rem 0 0;
-
-  text-align: right;
-  line-height: 2.375em;
+#languages {
+  margin-left: 7vw;
 }
 
-.list h3 {
+#tools {
+  margin: 0 0 0 4vw;
+}
+
+.list p {
   font-family: "Mulish", sans-serif;
-  line-height: 0.2;
-  margin-top: 1rem;
-  font-weight: 400;
-  font-size: 0.9em;
-  text-align: right;
+  margin: 0 !important;
+  font-weight: 700;
+  font-size: 0.7em;
+  text-align: left;
+  color: #e0eec7;
 }
 @media screen and (max-width: 480px) {
   .skills-list {
@@ -3340,7 +3347,7 @@ header.major .date:after {
   display: hidden;
   position: relative;
   visibility: hidden;
-  top: -10vh;
+  top: 5vh;
 }
 
 .work-anchor {
@@ -3762,17 +3769,26 @@ body.is-preload #wrapper.fade-in:before {
   background-color: #18bfef;
 }
 
-#intro h1 {
-  font-size: 2.5rem;
-  line-height: 1;
+.intro-box {
+  width: 60vw;
+}
+
+.name-container {
+  border-style: hidden hidden solid hidden;
+  border-width: 1px;
+}
+
+#intro-name {
+  font-size: 3rem;
+  line-height: 0;
   font-weight: 200;
+  text-align: left;
 }
 
 #intro p {
   font-size: 1rem;
   font-style: italic;
-  margin-top: -0.25rem;
-  text-align: center;
+  text-align: left;
 }
 
 #intro + #header {
@@ -3968,6 +3984,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   color: #18bfef !important;
 }
 
+header h2 {
+  font-size: 3em !important;
+}
+
 @media screen and (max-width: 980px) {
   #header {
     height: 14rem;
@@ -3990,13 +4010,10 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 
 .navigation {
   font-family: "Cormorant", serif;
-  height: 7vh;
+  height: 1vh;
   width: 40vw;
-  position: sticky;
-  top: 0;
-  margin: 0 auto;
-  text-align: center;
-  /* font-weight: 200; */
+  margin: 0 1rem 0 auto;
+  text-align: right;
   -moz-transition: -moz-transform 1s ease, opacity 1s ease;
   -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
   -ms-transition: -ms-transform 1s ease, opacity 1s ease;
@@ -4005,7 +4022,7 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   background-color: rgba(102, 33, 33, 0.15); */
 }
 .navigation a {
-  margin: 0vh 2vw 0 2.5vw;
+  margin: 0vh 1vw 0 2vw;
   opacity: 1;
   font-size: 1.2em;
   font-weight: 600;
@@ -4357,7 +4374,8 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
 }
 
 .summary {
-  width: 65%;
+  width: 55%;
+  float: left;
 }
 
 @media screen and (max-width: 736px) {
