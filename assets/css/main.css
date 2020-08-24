@@ -3363,6 +3363,12 @@ header.major .date:after {
   visibility: hidden;
   top: -7vh;
 }
+
+#contact-me {
+  font-weight: 300;
+  font-size: 4em;
+  margin-bottom: 3vh;
+}
 /* Table */
 
 .table-wrapper {
