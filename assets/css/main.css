@@ -2005,7 +2005,7 @@ hr {
 
   .row {
     margin-top: 0;
-    margin-left: -1.5rem;
+    margin-left: -1.5rem !important;
   }
 
   .row > * {
@@ -4040,7 +4040,74 @@ header h2 {
   color: #fa9500 !important;
 }
 
-#archivenav {
+@media screen and (max-width: 480px) {
+
+
+
+  .intro-box {
+    width: 95%;
+  }
+
+  .name-container h1{
+    font-size: 2.6em !important;
+  }
+
+  .summary {
+    width: 95% !important;
+
+  }
+
+  .navigation {
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+    word-spacing: 2em;
+    margin: 2rem auto 0 auto;
+
+  }
+
+  .left-quote {
+    width: 45%;
+    margin: 15vh 0 auto 1vw;
+    font-weight: 500;
+  }
+
+  .col-6 {
+    width: 100% !important;
+  }
+
+  .col-3 {
+    width: 50% !important;
+    padding: 0;
+  }
+
+  .skills-list {
+    padding: 0;
+    margin-left: 1rem;
+  }
+
+  .col-4 {
+    width: 100% !important;
+    margin: 2rem auto;
+  }
+
+  .row.gtr-150 {
+    margin-left: -2.25rem !important;
+  }
+
+  .profile-pic {
+    max-width: 100%;
+  }
+
+
+
+
+
+
+
+}
+
+} #archivenav {
   font-size: 1.2em;
   font-weight: 600;
   font-family: "Cormorant", serif;
