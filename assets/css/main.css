@@ -191,7 +191,7 @@ html {
 
 body {
   /* background-color: #2d3339; */
-  background-color: #2a2f39;
+  background-color: #2d2f35;
 }
 
 body.is-preload *,
@@ -4526,7 +4526,7 @@ header h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  background-color: #2a2f39;
+  /* background-color: #2a2f39; */
 }
 
 #contactinfo {
