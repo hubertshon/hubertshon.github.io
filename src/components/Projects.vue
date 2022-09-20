@@ -1,20 +1,20 @@
 <template>
-    <b-container class="d-flex align-self-top justify-content-center hi5" fluid="md" align-v="center">
-        <div>
+    <b-container class="d-flex justify-content-center" fluid="md" align-v="center">
+        <div class="align-self-center h-100">
           <b-row>
             <h1 class="display-4 mb-4">Projects</h1>
           </b-row>
           <b-row class="mt-5 mb-2">
             <h5>Latest</h5>
           </b-row>
-          <b-row>
-              <b-col><InfoCard 
+          <b-row class="justify-content-center"> 
+              <b-col class="d-flex justify-content-center m-3"><InfoCard 
                 text="Casa Bar Menu" 
                 link="https://angry-ritchie-9530d3.netlify.app/" 
                 imageUrl="barmneu.png"
                 description="A menu of drinks I like to serve guests at home. Vue.js"
               /></b-col>
-              <b-col><InfoCard
+              <b-col class="d-flex justify-content-center m-3"><InfoCard
                 text="MeesterKeem Twitch"
                 link="https://twitch.tv/meesterkeem"
                 imageUrl="twitch.png" 
@@ -25,13 +25,13 @@
             <h5>Early Projects</h5>
           </b-row>
           <b-row>
-              <b-col><InfoCard
+              <b-col class="d-flex justify-content-center m-3"><InfoCard
                 text="Regulae"
                 link="https://www.youtube.com/watch?v=XUN3ksZ0bzU"
                 imageUrl="regulae.png" 
                 description="Habit tracker that organizes habits into larger categories. Rails, Vue.js"
                 /></b-col>
-              <b-col><InfoCard 
+              <b-col class="d-flex justify-content-center m-3"><InfoCard 
                 text="Grade My Professor"
                 link="https://peaceful-lowlands-22766.herokuapp.com/"
                 imageUrl="professor.png" 
@@ -103,7 +103,6 @@ p {
 }
 
 .hi5 {
-    /* background-color: black; */
     height: 100%;
 }
 
