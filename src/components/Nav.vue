@@ -47,7 +47,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .nav-container {
-  margin: 0 auto 3rem auto;
+  margin: 0 auto;
   max-width: 65%;
   height: 4vh;
 }
@@ -78,7 +78,7 @@ export default {
 
   .nav-button {
     letter-spacing: 0.25em;
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
 }
 
