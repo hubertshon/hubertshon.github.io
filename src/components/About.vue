@@ -1,6 +1,6 @@
 <template>
-    <b-container class="d-flex" fluid="sm" align-v="start">
-        <div class="about align-self-center h-100">
+    <b-container class="d-flex align-self-center h-100" fluid="sm" align-v="center">
+        <div>
             <b-row class="justify-content-left ml-0 mb-3">
                 <h1 class="display-4">About</h1>
             </b-row>
