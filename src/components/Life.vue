@@ -1,12 +1,12 @@
 <template>
     <b-container class="d-flex align-self-top justify-content-center hi5" fluid="md" align-v="center">
         <div class="align-self-center justify-content-center contact">
-          <b-row class="justify-content-left header">
+          <!-- <b-row class="justify-content-left header">
               <h1 class="display-5">{{ selectQuote.text }}</h1>
           </b-row>
           <b-row class="mb-5">
               <span>{{ selectQuote.author }} </span><span v-if="selectQuote.source" style="font-style: italic;">, {{ selectQuote.source }}</span>
-          </b-row>
+          </b-row> -->
           <!-- <b-row></b-row> -->
             
 
@@ -47,19 +47,19 @@
 </template>
 
 <script>
-import quotes from '../assets/quotes.js';
+// import quotes from '../assets/quotes.js';
 // import InfoCard from './InfoCard.vue';
 
 export default {
   name: 'Life',
   // components: { InfoCard }, 
   data: () => ({
-    quoteNumber: 0,
-    selectQuote: quotes[this.quoteNumber]
+    // quoteNumber: 0,
+    // selectQuote: quotes[this.quoteNumber]
   }),
   created() {
-    this.quoteNumber = Math.random() * quotes.quotes.length | 0;
-    this.selectQuote = quotes.quotes[this.quoteNumber];
+    // this.quoteNumber = Math.random() * quotes.quotes.length | 0;
+    // this.selectQuote = quotes.quotes[this.quoteNumber];
   }
 }
 </script>

@@ -1,13 +1,34 @@
 <template>
-    <b-container class="d-flex justify-content-center" fluid="md" align-v="center">
-        <div class="align-self-center h-100">
+    <b-container class="d-flex justify-content-center" fluid="xxl" align-v="center">
+        <div class="align-self-center justify-content-center h-100">
           <b-row>
             <h1 class="display-4 mb-4">Projects</h1>
           </b-row>
           <b-row class="mt-5 mb-2">
-            <h5>Latest</h5>
+            <h4>Latest</h4>
           </b-row>
           <b-row class="justify-content-center"> 
+            <b-col md="*">
+              <Project 
+                imageUrl="address_book.png" 
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+            </b-col>
+            <b-col md="*">
+              <Project 
+                imageUrl="bar_menu.png" 
+                description="A menu of drinks I like to serve guests at home. Vue.js" />
+            </b-col>
+            <b-col md="*">
+                <Project 
+                imageUrl="twitch.png" 
+                description="Graphics and widgets for a Twitch channel." />
+            </b-col>
+            <!-- <b-col class="d-flex justify-content-center m-3"><InfoCard 
+                text="Address Book" 
+                link="https://iridescent-marigold-e6ec59.netlify.app/app/list-page" 
+                imageUrl="address_book.png"
+                description="Address book mini app with focus on mobile responsiveness"
+              /></b-col>
               <b-col class="d-flex justify-content-center m-3"><InfoCard 
                 text="Casa Bar Menu" 
                 link="https://angry-ritchie-9530d3.netlify.app/" 
@@ -19,13 +40,24 @@
                 link="https://twitch.tv/meesterkeem"
                 imageUrl="twitch.png" 
                 description="Graphics and widgets for a Twitch channel."
-                /></b-col>
+                /></b-col> -->
           </b-row>
           <b-row class="mt-5 mb-2">
-            <h5>Early Projects</h5>
+            <h4>Early Projects</h4>
           </b-row>
-          <b-row>
-              <b-col class="d-flex justify-content-center m-3"><InfoCard
+          <b-row class="justify-content-center">
+            <b-col md="*">
+              <Project 
+                imageUrl="professor.png" 
+                description="A mock educator rating site. Node/Express.js, Vue.js" />
+            </b-col>
+            <b-col md="*">
+              <Project 
+                imageUrl="regulae.png" 
+                description="Habit tracker that organizes habits into larger categories. Rails, Vue.js" />
+            </b-col>
+            
+              <!-- <b-col class="d-flex justify-content-center m-3"><InfoCard
                 text="Regulae"
                 link="https://www.youtube.com/watch?v=XUN3ksZ0bzU"
                 imageUrl="regulae.png" 
@@ -36,7 +68,7 @@
                 link="https://peaceful-lowlands-22766.herokuapp.com/"
                 imageUrl="professor.png" 
                 description="A mock educator rating site. Node/Express.js, Vue.js"
-                /></b-col>
+                /></b-col> -->
           </b-row>
         </div>
 
@@ -54,19 +86,20 @@
 </template>
 
 <script>
-import quotes from '../assets/quotes.js';
-import InfoCard from './InfoCard.vue';
+// import quotes from '../assets/quotes.js';
+// import InfoCard from './InfoCard.vue';
+import Project from './Project.vue';
 
 export default {
   name: 'Life',
-  components: { InfoCard }, 
+  components: { Project }, 
   data: () => ({
-    quoteNumber: 0,
-    selectQuote: quotes[this.quoteNumber]
+    // quoteNumber: 0,
+    // selectQuote: quotes[this.quoteNumber]
   }),
   created() {
-    this.quoteNumber = Math.random() * quotes.quotes.length | 0;
-    this.selectQuote = quotes.quotes[this.quoteNumber];
+    // this.quoteNumber = Math.random() * quotes.quotes.length | 0;
+    // this.selectQuote = quotes.quotes[this.quoteNumber];
   }
 }
 </script>

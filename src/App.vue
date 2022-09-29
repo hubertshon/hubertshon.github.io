@@ -3,7 +3,7 @@
     <Nav />
     <div class="d-flex justify-content-between align-items-center" style="height: 100%;">
 
-    <b-container class="container">
+    <b-container fluid>
       <transition 
         name="router-anim" 
         enter-active-class="animated fadeIn" 
