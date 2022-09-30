@@ -1,6 +1,6 @@
 <template>
     <b-container class="d-flex align-self-center h-100" fluid="sm" align-v="center">
-        <div>
+        <div class="about-container">
             <b-row class="justify-content-left ml-0 mb-3">
                 <h1 class="display-4">About</h1>
             </b-row>
@@ -157,5 +157,15 @@ td {
 
 .summary {
     font-size: 1.25em;
+}
+
+.about-container {
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        align-self: start;
+    }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <b-container class="d-flex justify-content-center" fluid="xxl" align-v="center">
+    <b-container class="d-flex justify-content-center" align-v="center">
         <div class="align-self-center justify-content-center h-100">
           <b-row>
             <h1 class="display-4 mb-4">Projects</h1>
@@ -8,80 +8,31 @@
             <h4>Latest</h4>
           </b-row>
           <b-row class="justify-content-center"> 
-            <b-col md="*">
               <Project 
-                imageUrl="address_book.png" 
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-            </b-col>
-            <b-col md="*">
-              <Project 
-                imageUrl="bar_menu.png" 
-                description="A menu of drinks I like to serve guests at home. Vue.js" />
-            </b-col>
-            <b-col md="*">
-                <Project 
-                imageUrl="twitch.png" 
-                description="Graphics and widgets for a Twitch channel." />
-            </b-col>
-            <!-- <b-col class="d-flex justify-content-center m-3"><InfoCard 
-                text="Address Book" 
-                link="https://iridescent-marigold-e6ec59.netlify.app/app/list-page" 
-                imageUrl="address_book.png"
-                description="Address book mini app with focus on mobile responsiveness"
-              /></b-col>
-              <b-col class="d-flex justify-content-center m-3"><InfoCard 
-                text="Casa Bar Menu" 
-                link="https://angry-ritchie-9530d3.netlify.app/" 
-                imageUrl="barmneu.png"
-                description="A menu of drinks I like to serve guests at home. Vue.js"
-              /></b-col>
-              <b-col class="d-flex justify-content-center m-3"><InfoCard
-                text="MeesterKeem Twitch"
-                link="https://twitch.tv/meesterkeem"
-                imageUrl="twitch.png" 
-                description="Graphics and widgets for a Twitch channel."
-                /></b-col> -->
+                v-for="(project, index) in projects"
+                :title="project.name"
+                :imageUrl="project.imageUrl"
+                :link="project.link"
+                :technologies="project.technologies"
+                :description="project.description"
+                :key="index"
+               />
           </b-row>
           <b-row class="mt-5 mb-2">
             <h4>Early Projects</h4>
           </b-row>
           <b-row class="justify-content-center">
-            <b-col md="*">
-              <Project 
-                imageUrl="professor.png" 
-                description="A mock educator rating site. Node/Express.js, Vue.js" />
-            </b-col>
-            <b-col md="*">
-              <Project 
-                imageUrl="regulae.png" 
-                description="Habit tracker that organizes habits into larger categories. Rails, Vue.js" />
-            </b-col>
-            
-              <!-- <b-col class="d-flex justify-content-center m-3"><InfoCard
-                text="Regulae"
-                link="https://www.youtube.com/watch?v=XUN3ksZ0bzU"
-                imageUrl="regulae.png" 
-                description="Habit tracker that organizes habits into larger categories. Rails, Vue.js"
-                /></b-col>
-              <b-col class="d-flex justify-content-center m-3"><InfoCard 
-                text="Grade My Professor"
-                link="https://peaceful-lowlands-22766.herokuapp.com/"
-                imageUrl="professor.png" 
-                description="A mock educator rating site. Node/Express.js, Vue.js"
-                /></b-col> -->
+            <Project 
+                v-for="(project, index) in earlyProjects"
+                :title="project.name"
+                :imageUrl="project.imageUrl"
+                :link="project.link"
+                :technologies="project.technologies"
+                :description="project.description"
+                :key="index"
+               />
           </b-row>
         </div>
-
-        <!-- <div class="align-self-center contact">
-            <b-row class="justify-content-left header">
-                <img src="../assets/images/oryukdo.jpg">
-            </b-row>
-            <b-row>
-                <span>{{ selectQuote.author }} </span><span v-if="selectQuote.source" style="font-style: italic;">, {{ selectQuote.source }}</span>
-            </b-row>
-        </div> -->
-
-          
     </b-container>
 </template>
 
@@ -89,17 +40,18 @@
 // import quotes from '../assets/quotes.js';
 // import InfoCard from './InfoCard.vue';
 import Project from './Project.vue';
+import projectList from '../assets/projects.js';
 
 export default {
   name: 'Life',
   components: { Project }, 
   data: () => ({
-    // quoteNumber: 0,
-    // selectQuote: quotes[this.quoteNumber]
+    projects: [],
+    earlyProjects: []
   }),
   created() {
-    // this.quoteNumber = Math.random() * quotes.quotes.length | 0;
-    // this.selectQuote = quotes.quotes[this.quoteNumber];
+    this.projects = projectList.latestProjects;
+    this.earlyProjects = projectList.earlyProjects;
   }
 }
 </script>

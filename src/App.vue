@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Nav />
-    <div class="d-flex justify-content-between align-items-center" style="height: 100%;">
+    <!-- <div class="d-flex justify-content-between h-100"> -->
 
-    <b-container fluid>
+    <b-container class="h-100" fluid>
       <transition 
         name="router-anim" 
         enter-active-class="animated fadeIn" 
@@ -14,7 +14,7 @@
       </transition>
     </b-container>
 
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 

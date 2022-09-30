@@ -1,13 +1,19 @@
 <template>
-        <div class="card-container d-flex justify-content-start flex-column" @mouseover="hover = true" @mouseleave="hover = false">
+        <div class="card-container d-flex justify-content-start flex-column" @mouseover="hover = true" @mouseleave="hover = false" @click="goToLink">
             <div class="align-self-start justify-items-start thumbnail" :class="{ hoverimg: hover }">
               <img :src="getImgUrl(imageUrl)" />
             </div>
             <div class="details">
-                <h2>Address Book</h2>
+                <h2>{{title}}</h2>
                 <div class="description">
-                    <span v-if="hover === false">Angular</span>
-                    <span v-if="hover">{{ description }}</span>
+                      <div v-if="hover">
+                        <span>Made with:</span>
+                          <ul>
+                            <li v-for="(tech, index) in technologies" :key=index>{{tech}}
+                            </li>
+                          </ul>
+                      </div>
+                    <span v-if="!hover">{{ description }}</span>
                 </div>
             </div>
         </div>
@@ -17,8 +23,10 @@
 export default {
   name: 'Project',
   props: {
+    title: String,
     imageUrl: String,
-    // link: String,
+    link: String,
+    technologies: [],
     description: String
 
   },
@@ -28,9 +36,9 @@ export default {
     }
   },
   methods: {
-    // goToLink() {
-    //   window.open(this.link);
-    // },
+    goToLink() {
+      window.open(this.props.link);
+    },
     getImgUrl(url) {
       return require('../assets/images/thumbnails/' + url);
     }
@@ -44,7 +52,7 @@ export default {
     margin: 1rem;
     border-radius: 6px;
     /* border: 0.5px solid rgb(102, 102, 102);  */
-    background-color: #e5e5e5;
+    background-color: #ececec;
     width: 20rem;
     height: 25rem;
     box-shadow: 0px 20px 30px -18px rgb(0, 0, 0, 0.5);
