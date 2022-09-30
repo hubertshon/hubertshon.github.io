@@ -4,7 +4,7 @@ export default {
         {
             name: "Address Book",
             imageUrl: "address_book.png",
-            link: "",
+            link: "https://iridescent-marigold-e6ec59.netlify.app",
             technologies: ["Angular"],
             description: "A mini mock address book app with a focus on mobile responsiveness"
         },
@@ -12,7 +12,7 @@ export default {
             name: "Report Builder",
             imageUrl: "dashboard_builder.png",
             link: "https://youtu.be/xEU-Jp8gaiQ",
-            technologies: ["Angular, RxJs, SyncFusion"],
+            technologies: ["Angular, RxJs, SyncFusion, Django, MongoDB"],
             description: "Demo video of the report builder application built at my last company. This was an internal use tool to build client-facing dashboards."
         },
         {
@@ -20,7 +20,7 @@ export default {
             imageUrl: "bar_menu.png",
             link: "https://angry-ritchie-9530d3.netlify.app/",
             technologies: ["Vue"],
-            description: "A bar menu"
+            description: "A bar menu to help guests select their drink of choice. Yes, I know how to make these."
         },
         {
             name: "MeesterKeem",
@@ -34,14 +34,20 @@ export default {
         {
             name: "Grade My Professor",
             imageUrl: "professor.png",
-            technologies: ["Vue", "Node.js", "PostgreSQL"],
+            technologies: ["Vue", "Express.js", "PostgreSQL"],
             description: "A mock educator grading site."
+        },
+        {
+            name: "Regards",
+            imageUrl: "regards.png",
+            technologies: ["React"],
+            description: "A fun first venture in React. Allows users to retrieve images and begin making custom greeting cards. In this group project, I mainly contributed to the app's design."
         },
         {
             name: "Regulae",
             imageUrl: "regulae.png",
             link: "https://twitch.tv/meesterkeem",
-            technologies: ["Figma", "Javascript"],
+            technologies: ["Vue", "Ruby on Rails", "PostgreSQL"],
             description: "A habit tracker that groups categories of habits. This was the capstone project from Actualize Bootcamp"
         }
 

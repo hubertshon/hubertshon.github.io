@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     goToLink() {
-      window.open(this.props.link);
+      window.open(this.link);
     },
     getImgUrl(url) {
       return require('../assets/images/thumbnails/' + url);

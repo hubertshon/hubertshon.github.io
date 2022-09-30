@@ -7,7 +7,7 @@
           <b-row class="mt-5 mb-2">
             <h4>Latest</h4>
           </b-row>
-          <b-row class="justify-content-center"> 
+          <b-row class="latest-projects justify-content-left"> 
               <Project 
                 v-for="(project, index) in projects"
                 :title="project.name"
@@ -21,7 +21,7 @@
           <b-row class="mt-5 mb-2">
             <h4>Early Projects</h4>
           </b-row>
-          <b-row class="justify-content-center">
+          <b-row class="early-projects justify-content-left">
             <Project 
                 v-for="(project, index) in earlyProjects"
                 :title="project.name"
@@ -97,5 +97,11 @@ p {
 .row-heading {
     font-weight: bold;
     margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .latest-projects, .early-projects {
+      justify-content: center;
+    }
 }
 </style>
