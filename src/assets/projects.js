@@ -9,6 +9,13 @@ export default {
             description: "A mini mock address book app with a focus on mobile responsiveness"
         },
         {
+            name: "Report Builder",
+            imageUrl: "dashboard_builder.png",
+            link: "https://youtu.be/xEU-Jp8gaiQ",
+            technologies: ["Angular, RxJs, SyncFusion"],
+            description: "Demo video of the report builder application built at my last company. This was an internal use tool to build client-facing dashboards."
+        },
+        {
             name: "Bar Menu",
             imageUrl: "bar_menu.png",
             link: "https://angry-ritchie-9530d3.netlify.app/",

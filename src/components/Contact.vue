@@ -7,7 +7,7 @@
             <b-row>
                 <b-col class="ml-0" cols="3">
                     <p class="row-heading">Location</p></b-col>
-                     <b-col cols="0.5">
+                     <b-col class="icon" cols="1">
                         <font-awesome-icon icon="fa-solid fa-location-dot" />
                     </b-col>
                 <b-col cols="8">New York City Area</b-col>
@@ -15,7 +15,7 @@
             <b-row>
                 <b-col cols="3">
                     <p class="row-heading">Email</p></b-col>
-                <b-col cols="0.5">
+                <b-col cols="1" class="icon">
                     <font-awesome-icon icon="fa-solid fa-envelope" />
                 </b-col>
                 <b-col cols="8"><a href="mailto:hubert.shon@gmail.com">hubert.shon@gmail.com</a></b-col>
@@ -23,7 +23,7 @@
             <b-row> 
                 <b-col cols="3">
                     <p class="row-heading">Github</p></b-col>
-                <b-col cols="0.5">
+                <b-col cols="1" class="icon">
                     <font-awesome-icon icon="fa-brands fa-github-square" />
                 </b-col>
                 <b-col cols="8"><a href="http://github.com/hubertshon">github.com/hubertshon</a></b-col>
@@ -31,7 +31,7 @@
             <b-row>
                 <b-col cols="3">
                     <p class="row-heading">LinkedIn</p></b-col>
-                <b-col cols="0.5">
+                <b-col cols="1" class="icon">
                     <font-awesome-icon icon="fa-brands fa-linkedin" />
                 </b-col>
                 <b-col cols="8"><a href="http://linkedin.com/in/hubert-shon">linkedin.com/in/hubert-shon</a></b-col>
@@ -90,5 +90,11 @@ p {
 .row-heading {
     font-weight: bold;
     margin-left: 0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    width: 0.5rem;
 }
 </style>
