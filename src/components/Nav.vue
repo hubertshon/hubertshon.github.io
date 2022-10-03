@@ -1,16 +1,16 @@
 <template>
   <div class="nav-container">
     <b-row align-h="center" class="d-flex align-content-middle">
-      <b-col class="d-flex">
+      <b-col class="d-flex justify-content-center">
           <span class="nav-button"><router-link to="/">Home</router-link></span>
       </b-col>
-      <b-col class="d-flex">
+      <b-col class="d-flex justify-content-center">
           <span class="nav-button"><router-link to="/about">About</router-link></span>
         </b-col>
-        <b-col class="d-flex">
+        <b-col class="d-flex justify-content-center">
           <span class="nav-button"><router-link to="/projects">Projects</router-link></span>
         </b-col>
-        <b-col class="d-flex">
+        <b-col class="d-flex justify-content-center">
           <span class="nav-button"><router-link to="/contact">Contact</router-link></span>
           </b-col>
     </b-row>
